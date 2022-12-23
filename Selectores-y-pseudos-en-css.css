@@ -1,0 +1,49 @@
+
+body{
+    display: flex;
+}
+
+.botón {
+    padding: 2rem 4rem; 
+    position: relative;
+    overflow: hidden;
+    border-radius: .9rem;
+}
+
+
+.botón::before{
+    content: "Pasar por encima";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+}
+
+
+.botón:hover {
+    color: white;
+    background-color: green;
+    
+}
+
+.botón::after{
+    content: "¡Hecho!";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    font-size: 1.5rem;
+    }
+
+.botón:hover::before {
+    opacity: 0;
+}
+
+.botón:hover::after {
+    opacity: 1;
+}
+
+
+
+
